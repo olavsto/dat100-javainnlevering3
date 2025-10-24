@@ -70,9 +70,9 @@ public class Blogg {
 	
 	public String toString() {
 		String s = getAntall() + "\n";
-        for(Innlegg i : innleggtabell)
+        for(int i =0; i<nesteledig;i++)
         {
-            s += i.toString();
+            s += innleggtabell[i].toString();
         }
         return  s;
 	}

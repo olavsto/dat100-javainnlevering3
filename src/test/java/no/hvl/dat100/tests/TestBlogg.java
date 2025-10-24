@@ -14,7 +14,6 @@ public class TestBlogg {
 		
 		assertEquals(samling.getAntall(),0);
 		assertEquals(samling.getSamling().length,20);
-		
 	}
 
 	@Test
