@@ -5,6 +5,9 @@ import no.hvl.dat100.common.TODO;
 public class Bilde extends Tekst {
 
 	private String url;
+
+    private static final int HOEYDE = 600;
+    private static final int BREDDE = 800;
 	
 	public Bilde(int id, String bruker, String dato, String tekst, String url) {
 		super(id, bruker, dato, tekst);
@@ -34,7 +37,10 @@ public class Bilde extends Tekst {
 	// Metoden nedenfor er kun for valgfri oppgave 6
 	public String toHTML() {
 		
-		throw new UnsupportedOperationException(TODO.method());
-				
+		return super.toHTML()+iframe(url);
 	}
+
+    private String iframe(String s) {
+        return "\t\t<iframe src=\""+s+"\" height="+HOEYDE+" width="+BREDDE+"></iframe>\n";
+    }
 }

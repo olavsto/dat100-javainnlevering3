@@ -8,6 +8,8 @@ public abstract class Innlegg {
     private String bruker;
     private String dato;
     private int likes;
+
+    protected static final String HR = "\t\t<hr>\n";
 	
 	public Innlegg() {
 		
@@ -78,7 +80,14 @@ public abstract class Innlegg {
 	// Metoden nedenfor er kun for valgfri oppgave 6
 	public String toHTML() {
 		
-		throw new UnsupportedOperationException(TODO.method());
-				
+		return h2(bruker+"@"+dato +" ["+likes+"]");
 	}
+
+    private String h2(String s) {
+        return "\t\t<h2>"+s+"</h2>\n";
+    }
+
+    protected String p(String s) {
+        return "\t\t<p>"+s+"</p>\n";
+    }
 }

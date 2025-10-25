@@ -6,6 +6,6 @@ public class Configuration {
 		
 		public static String SERVER = "localhost";
 		
-		public static int N = 3;
+		public static int N = 10;
 		
 }
